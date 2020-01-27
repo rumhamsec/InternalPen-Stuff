@@ -1,0 +1,11 @@
+# Make directory to mount to:
+mkdir /tmp/mount
+
+# Mount desired directory:
+mount -t nfs -o nolock <IP address of nfs share>:</ifs/docs/infrastructure/downloads> /tmp/mount
+
+# Example:
+mount -t nfs -o nolock 10.10.13.37:/ifs/docs/infrastructure/downloads /tmp/mount
+
+cd /tmp/mount
+ls -l
