@@ -1,0 +1,13 @@
+responder -I eth0
+
+Enable WPAD proxy, netbios wredir (-r), and fingerpringting (-f)
+responder -i 192.168.1.202 -w On -r On -f On
+
+Log Files:
+Log files for Responder are located in /usr/share/responder/logs
+
+Command:
+Responder -I eth0 -wbF
+“-w” Starts the WPAD Server
+“-b” Enables basic HTTP authentication
+“-F” Forces authentication for WPAD (a login prompt)
